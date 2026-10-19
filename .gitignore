@@ -1,0 +1,164 @@
+# =============================================================================
+# Git Ignore Configuration for AI Atmospheric Visibility Enhancement Project
+# =============================================================================
+
+# Python Environments & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Testing, Linting & Coverage Caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+
+# IDE & Editor Configurations
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Local Secrets & Credentials
+.env
+.env.*
+*.key
+*.pem
+*.cert
+credentials.json
+
+# Operating System Artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+*.tmp
+
+# Temporary & Scratch Files
+*.log
+scratch/
+tmp/
+temp/
+
+# -----------------------------------------------------------------------------
+# Datasets (Exclude multi-gigabyte raw & processed data; keep directory anchors)
+# -----------------------------------------------------------------------------
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/README.md
+
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/README.md
+
+# Large dataset archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Sample data media exclusions
+data/samples/*.mp4
+data/samples/*.avi
+data/samples/*.mov
+data/samples/*.mkv
+
+# -----------------------------------------------------------------------------
+# Model Checkpoints & Pretrained Binaries (Exclude weights; keep documentation)
+# -----------------------------------------------------------------------------
+models/checkpoints/*
+!models/checkpoints/.gitkeep
+!models/checkpoints/README.md
+
+models/pretrained/*
+!models/pretrained/.gitkeep
+!models/pretrained/README.md
+
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.h5
+*.bin
+*.safetensors
+
+# -----------------------------------------------------------------------------
+# Generated Outputs (Exclude generated images, videos, and raw benchmark CSV/JSON)
+# -----------------------------------------------------------------------------
+outputs/images/*
+!outputs/images/.gitkeep
+
+outputs/videos/*
+!outputs/videos/.gitkeep
+
+outputs/metrics/*
+!outputs/metrics/.gitkeep
+
+outputs/inference/*
+!outputs/inference/.gitkeep
+
+outputs/training/*
+!outputs/training/.gitkeep
+
+# Exclude generated media, comparison grids, and large data dumps in outputs
+outputs/**/*.png
+outputs/**/*.jpg
+outputs/**/*.jpeg
+outputs/**/*.webp
+outputs/**/*.bmp
+outputs/**/*.mp4
+outputs/**/*.avi
+outputs/**/*.mov
+outputs/**/*.mkv
+outputs/**/*.csv
+outputs/**/*.json
+outputs/**/comparisons/
+outputs/evaluation/comparisons/
+
+# Retain directory anchors and documentation reports in outputs
+!outputs/**/.gitkeep
+!outputs/**/*.md
+!outputs/*.md
